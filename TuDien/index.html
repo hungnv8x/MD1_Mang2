@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhập từ cần dịch : <input id="en" type="text"></p>
+<button onclick="kiemtra()">Dich</button>
+<br><br>
+<p id="vn"></p>
+<script>
+    let arrEn = ['cat', 'dog', 'coffee', 'milk']
+    let arrVn = ['con mèo', 'con chó', 'cà phê', 'sữa']
+    function kiemtra() {
+        let inputEn = document.getElementById('en').value;
+        let index = arrEn.indexOf(inputEn)
+        if (index >= 0) {
+            document.getElementById('vn').innerHTML = arrVn[index]
+        } else {
+            document.getElementById('vn').innerHTML='Chờ cập nhập từ điển đã nhé :))'
+        }
+    }
+</script>
+</body>
+</html>
