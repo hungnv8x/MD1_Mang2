@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button {
+            width: 30px;
+        }
+    </style>
+</head>
+<body>
+<div id="hienthi"></div>
+<br>
+<button onclick="changeValue('x');ktWinLose()">X</button>&nbsp;&nbsp;
+<button onclick="changeValue(0);ktWinLose()">0</button>
+<script>
+    let arr = [];
+    let data = "";
+    for (let i = 0; i < 10; i++) {
+        arr[i] = [];
+        for (let j = 0; j < 10; j++) {
+            arr[i][j] = '..';
+            data += arr[i][j] + '&nbsp&nbsp';
+        }
+        data += '<br>'
+    }
+    document.getElementById('hienthi').innerHTML = data;
+
+    function changeValue(kitu) {
+        data = "";
+        let a = +prompt('Nhap vi tri doc : ')
+        let b = +prompt('Nhap vi tri ngang : ')
+        arr[a][b] = kitu
+        for (let i = 0; i < 10; i++) {
+            for (let j = 0; j < 10; j++) {
+                data += arr[i][j] + '&nbsp&nbsp';
+            }
+            data += '<br>'
+        }
+        document.getElementById('hienthi').innerHTML = data
+    }
+
+    function ktWinLose() {
+        for (let i = 0; i < 10; i++) {
+            for (let j = 0; j < 10; j++) {
+                let nguoiWin=''
+                if ((arr[i][j] == 'x' && arr[i][j + 1] == 'x' && arr[i][j + 2] == 'x') || (arr[i][j] == 0 && arr[i][j + 1] == 0 && arr[i][j + 2] == 0)) {
+                   nguoiWin=arr[i][j]
+                    alert('Nguoi chon '+nguoiWin+' win')
+                    break;
+                } else if ((arr[i][j] == 'x' && arr[i + 1][j + 1] == 'x' && arr[i + 2][j + 2] == 'x') || (arr[i][j] == 0 && arr[i + 1][j + 1] == 0 && arr[i + 2][j + 2] == 0)) {
+                    nguoiWin=arr[i][j]
+                    alert('Nguoi chon '+nguoiWin+' win')
+                } else if ((arr[i][j] == 'x' && arr[i + 1][j] == 'x' && arr[i + 2][j] == 'x') || (arr[i][j] == 0 && arr[i + 1][j] == 0 && arr[i + 2][j] == 0)) {
+                    nguoiWin=arr[i][j]
+                    alert('Nguoi chon '+nguoiWin+' win')
+                } else if ((arr[9 - i][j] == 'x' && arr[8 - i][j + 1] == 'x' && arr[7 - i][j + 2] == 'x')||(arr[9 - i][j] == 0 && arr[8 - i][j + 1] == 0 && arr[7 - i][j + 2] == 0)) {
+                    nguoiWin=arr[i][j]
+                    alert('Nguoi chon '+nguoiWin+' win')
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>
