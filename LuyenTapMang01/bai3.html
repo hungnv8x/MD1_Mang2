@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = []
+    let i = 0;
+    alert('Nhap cac phan tu cua mang. Nhap -1 de ket thuc')
+    while (true) {
+        arr[i] = +prompt('Nhap phan tu ' + i)
+        if (arr[i] == '-1') {
+            arr.pop();
+            break
+        }
+        i++
+    }
+    document.write(arr + '<br>')
+    let max = arr[0]
+    let tong = 0;
+    for (let i=0;i<arr.length;i++){
+        tong+=arr[i]
+        if (max<arr[i]){
+            max=arr[i]
+        }
+    }
+    document.write('So lon nhat trong mang la : '+max+'<br>')
+    document.write('Gia tri trung binh cac phan tu trong mang la : '+tong/arr.length)
+</script>
+</body>
+</html>

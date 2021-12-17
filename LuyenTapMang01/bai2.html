@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    alert('Nhap 10 phan tu khac nhau cua mang :')
+    let arr = [];
+    for (let i = 0; i < 10; i++) {
+        arr[i] = +prompt('Phan tu ' + (i + 1))
+    }
+    document.write(arr + '<br>')
+    let max = arr[0];
+    let index = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (max < arr[i]) {
+            max = arr[i];
+            index = i;
+        }
+    }
+    document.write('Phan tu lon nhat trong mang la :' + max + ' co vi tri so ' + index)
+</script>
+</body>
+</html>

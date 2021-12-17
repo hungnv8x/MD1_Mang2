@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    alert('Nhap 10 so nguyen cua mang :')
+    let arr = [];
+    for (let i = 0; i < 10; i++) {
+        arr[i] = prompt('So thu ' + (i + 1))
+    }
+    document.write(arr+'<br>')
+    let arr2=arr.sort(function (a,b) {
+        return b-a;
+    })
+    document.write(arr2)
+</script>
+</body>
+</html>

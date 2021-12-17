@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    alert('Nhap 10 phan tu cua mang :')
+    let arr = [];
+    for (let i = 0; i < 10; i++) {
+        arr[i] = prompt('Phan tu ' + (i + 1))
+    }
+    document.write('Mang vua nhap la :<br>')
+    document.write(arr + '<br>')
+    let v = prompt('Nhap so nguyen bat ki : ')
+    if (arr.indexOf(v) >= 0) {
+        alert('So nguyen ' + v + ' co nam trong mang')
+        arr.splice(arr.indexOf(v),1)
+        document.write('Mang sau khi xoa '+v+' la : ')
+        document.write(arr)
+    } else {
+        alert('So nguyen ' + v + ' khong co trong mang')
+    }
+
+</script>
+</body>
+</html>

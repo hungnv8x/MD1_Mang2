@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    alert('Nhap 10 phan tu cua mang :')
+    let arr = [];
+    for (let i = 0; i < 10; i++) {
+        arr[i] = prompt('Phan tu ' + (i + 1))
+    }
+    document.write(arr+'<br>')
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] >= 10) {
+            count += 1;
+        }
+    }
+    document.write('Co tat ca ' + count + ' so lon hon hoac bang 10');
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  alert('Nhap 10 so nguyen cua mang a :')
+  let a = [];
+  for (let i = 0; i < 10; i++) {
+    a[i] = prompt('So thu ' + (i + 1))
+  }
+  alert('Nhap 10 so nguyen cua mang  b :')
+  let b = [];
+  for (let i = 0; i < 10; i++) {
+      b[i] = prompt('So thu ' + (i + 1))
+  }
+  let c=[]
+  c=a.concat(b);
+  document.write(a+'<br>');
+  document.write(b+'<br>')
+  document.write(c)
+</script>
+</body>
+</html>
